@@ -5,6 +5,7 @@
 
   export default defineConfig({
     plugins: [react()],
+      base: '/checklist-website-design/', // <-- Adicione esta linha com o nome do seu repositório
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -51,7 +52,11 @@
     },
     build: {
       target: 'esnext',
+<<<<<<< HEAD
       outDir: 'build',
+=======
+      outDir: 'docs',
+>>>>>>> 915994c67a391ba46706a7f6ae39a666e16a86f3
     },
     server: {
       port: 3000,
