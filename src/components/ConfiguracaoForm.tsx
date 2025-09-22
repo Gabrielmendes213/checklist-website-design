@@ -8,7 +8,7 @@ import { Switch } from './ui/switch';
 import { Separator } from './ui/separator';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Save, RotateCcw, Download, Upload, Plus, Trash2, Edit } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface Template {
   id: string;
@@ -478,7 +478,7 @@ export function ConfiguracaoForm() {
             </div>
             <Switch
               checked={config.checklistSettings.autoSave}
-              onCheckedChange={(checked) => updateConfig('checklistSettings', 'autoSave', checked)}
+              onCheckedChange={(checked: boolean) => updateConfig('checklistSettings', 'autoSave', checked)}
             />
           </div>
           
@@ -493,7 +493,7 @@ export function ConfiguracaoForm() {
             </div>
             <Switch
               checked={config.checklistSettings.showProgress}
-              onCheckedChange={(checked) => updateConfig('checklistSettings', 'showProgress', checked)}
+              onCheckedChange={(checked: boolean) => updateConfig('checklistSettings', 'showProgress', checked)}
             />
           </div>
           
@@ -508,7 +508,7 @@ export function ConfiguracaoForm() {
             </div>
             <Switch
               checked={config.checklistSettings.enableKeyboardNav}
-              onCheckedChange={(checked) => updateConfig('checklistSettings', 'enableKeyboardNav', checked)}
+              onCheckedChange={(checked: boolean) => updateConfig('checklistSettings', 'enableKeyboardNav', checked)}
             />
           </div>
         </CardContent>
